@@ -22,8 +22,6 @@ class CurrentUser(RetrieveUpdateAPIView):
         user = get_object_or_404(User, username=request.user.username)
         data = UserSerializer(user).data
         return Response(data)
-        
-
 
 
 class LoginView(APIView):
