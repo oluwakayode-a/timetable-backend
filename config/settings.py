@@ -59,11 +59,11 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
-    "https://k-timetable.netlify.app"
-]
-
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:8080",
+#     "https://k-timetable.netlify.app"
+# ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'config.urls'
 
