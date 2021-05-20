@@ -13,7 +13,7 @@ SECRET_KEY = '(4mz3eo3e#uptqkz%rz#u#03xljd-bg)3t!6b!x%r9d@cz=-di'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "k-timetable-backend.herokuapp.com"]
 
 
 # Application definition
