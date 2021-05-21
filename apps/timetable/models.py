@@ -17,10 +17,18 @@ class TimeTable(Timestamp, models.Model):
     @property
     def get_time_intervals(self):
         time_ranges = []
+        # Save original start time
+        og_start_time = self.start_time.strftime("%H:%M")
+
         for i in range(int(self.table_length)):
             self.start_time = (
                 datetime.combine(date(1,1,1), self.start_time) + timedelta(minutes=int(self.interval))).time()
             time_ranges.append(self.start_time.strftime("%H:%M"))
+        # Add the start_time to the start of the array
+        time_ranges.insert(0, og_start_time)
+
+        # remove last_item
+        time_ranges.pop()
         return time_ranges
 
 
